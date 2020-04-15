@@ -8,9 +8,17 @@ namespace PractiseAlgorithms
         {
             Console.WriteLine("Practice 1 :this Array has Duplicate Data");
             int[] sampleArray = WriteSampleArray();
-            ExecuteDuplicateDataInArray(sampleArray);
+            Console.WriteLine(DuplicateDataInArray.ContainDuplicates(sampleArray));
+            Console.Write("\n");
             Console.ReadLine();
 
+
+            Console.WriteLine("Practice 2 :this Array Sort Decending");
+
+            SortArray.DescendingOrder(sampleArray);
+            ReadArrayItems(sampleArray);
+            Console.Write("\n");
+            Console.ReadLine();
         }
 
         private static int[] WriteSampleArray()
@@ -25,19 +33,21 @@ namespace PractiseAlgorithms
                 arr[i] = Convert.ToInt32(Console.ReadLine());
             }
 
+            ReadArrayItems(arr);
+            return arr;
+        }
+
+        private static void ReadArrayItems(int[] arr)
+        {
             Console.Write("\nElements in array are: ");
             for (int i = 0; i < arr.Length; i++)
             {
                 Console.Write("{0}  ", arr[i]);
             }
             Console.Write("\n");
-            return arr;
         }
 
-        public static void ExecuteDuplicateDataInArray(int[] testArray)
-        {
-            Console.WriteLine(DuplicateDataInArray.ContainDuplicates(testArray));
-            Console.Write("\n");
-        }
+
+
     }
 }
