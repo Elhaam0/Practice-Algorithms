@@ -6,7 +6,7 @@ namespace PractiseAlgorithms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Practice 1 :this Array has Duplicate Data");
+            Console.WriteLine("Practice 1 :this Array has Duplicate Data?");
             int[] sampleArray = WriteSampleArray();
             Console.WriteLine(DuplicateDataInArray.ContainDuplicates(sampleArray));
             Console.Write("\n");
@@ -18,6 +18,16 @@ namespace PractiseAlgorithms
             SortArray.DescendingOrder(sampleArray);
             ReadArrayItems(sampleArray);
             Console.Write("\n");
+            Console.ReadLine();
+
+            Console.WriteLine("Practice 3: how to find sum of digits of a number");
+
+
+            int num, result;
+            Console.WriteLine("Enter the Number : ");
+            num = int.Parse(Console.ReadLine());
+            result = SumDigitsOfNumber.SumDigit(num);
+            Console.WriteLine("Sum of Digits in {0} is {1}", num, result);
             Console.ReadLine();
         }
 
